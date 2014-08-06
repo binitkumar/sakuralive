@@ -637,3 +637,7 @@ textarea#message {
     font-size: 24px;
     font-weight: bold;
 }
+.img-thumbnail {
+  height: 250px !important;
+	width: 250px !important;
+}
