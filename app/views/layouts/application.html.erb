@@ -17,7 +17,7 @@
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
     <![endif]-->
-    <link rel="shortcut icon" href="/assets/ico/favicon.ico">
+    <link rel="shortcut icon" href="/assets/favicon.ico">
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/assets/ico/apple-touch-icon-144-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/assets/ico/apple-touch-icon-114-precomposed.png">
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/assets/ico/apple-touch-icon-72-precomposed.png">
@@ -199,30 +199,30 @@ students of a batch, then their attendance, then their test results, then their 
                         <h1>Contact Form</h1>
                         <p>Just drop your contact details and query here. We shall be back to you ....</p>
                         <div class="status alert alert-success" style="display: none"></div>
-                        <form id="main-contact-form" class="contact-form" name="contact-form" method="post" action="sendemail.php" role="form">
+                        <%= form_for ContactForm.new, id: "main-contact-form", class: "contact-form" do |f| %>
                             <div class="row">
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Name">
+                                        <input name="contact_form[name]" type="text" class="form-control" required="required" placeholder="Name">
                                     </div>
                                 </div>
                                 <div class="col-sm-6">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" required="required" placeholder="Email address">
+                                        <input name="contact_form[email]" type="text" class="form-control" required="required" placeholder="Email address">
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="col-sm-12">
                                     <div class="form-group">
-                                        <textarea name="message" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
+                                        <textarea name="contact_form[message]" id="message" required="required" class="form-control" rows="8" placeholder="Message"></textarea>
                                     </div>
                                     <div class="form-group">
                                         <button type="submit" class="btn btn-danger btn-lg">Send Message</button>
                                     </div>
                                 </div>
                             </div>
-                        </form>
+                        <% end %>
                     </div><!--/.col-sm-6-->
                     <div class="col-sm-6">
                         <h1>Our Address</h1>
@@ -248,7 +248,7 @@ students of a batch, then their attendance, then their test results, then their 
                         <div class="row">
                             <div class="col-md-6">
                                 <ul class="social">
-                                    <li><a href="#"><i class="icon-facebook icon-social"></i> Facebook</a></li>
+                                    <li><a href="https://www.facebook.com/effectivetelm"><i class="icon-facebook icon-social"></i> Facebook</a></li>
                                     <li><a href="#"><i class="icon-google-plus icon-social"></i> Google Plus</a></li>
                                     <li><a href="#"><i class="icon-pinterest icon-social"></i> Pinterest</a></li>
                                 </ul>
