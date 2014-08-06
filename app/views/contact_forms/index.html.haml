@@ -1,0 +1,25 @@
+%h1 Listing contact_forms
+
+%table
+  %tr
+    %th Name
+    %th Email
+    %th Message
+    %th Status
+    %th
+    %th
+    %th
+
+  - @contact_forms.each do |contact_form|
+    %tr
+      %td= contact_form.name
+      %td= contact_form.email
+      %td= contact_form.message
+      %td= contact_form.status
+      %td= link_to 'Show', contact_form
+      %td= link_to 'Edit', edit_contact_form_path(contact_form)
+      %td= link_to 'Destroy', contact_form, :method => :delete, :data => { :confirm => 'Are you sure?' }
+
+%br
+
+= link_to 'New Contact form', new_contact_form_path

@@ -1,0 +1,18 @@
+%p#notice= notice
+
+%p
+  %b Name:
+  = @contact_form.name
+%p
+  %b Email:
+  = @contact_form.email
+%p
+  %b Message:
+  = @contact_form.message
+%p
+  %b Status:
+  = @contact_form.status
+
+= link_to 'Edit', edit_contact_form_path(@contact_form)
+\|
+= link_to 'Back', contact_forms_path
