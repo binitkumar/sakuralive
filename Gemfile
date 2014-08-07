@@ -44,3 +44,4 @@ end
 # Use debugger
 # gem 'debugger', group: [:development, :test]
 gem 'comfortable_mexican_sofa', '~> 1.11.0'
+gem 'capistrano', "~> 2.14.2"
